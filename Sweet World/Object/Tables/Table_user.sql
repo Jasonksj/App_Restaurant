@@ -9,8 +9,7 @@ SET ECHO OFF
 CREATE TABLE Users
 (
    id_user  INT         NOT NULL,
-   username VARCHAR(25) NOT NULL UNIQUE,
-   password VARCHAR(9)  NOT NULL,
-   id_admin int
+   username VARCHAR(25) NOT NULL,
+   password VARCHAR(9)  NOT NULL
 );
  --***********BY TATSINKOU**********--
