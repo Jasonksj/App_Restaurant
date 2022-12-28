@@ -1,7 +1,7 @@
 CREATE TABLE Menu
 (
     id_menu          INT          NOT NULL,
-    Menu_title       VARCHAR(40)  NOT NULL,
+    Menu_title       VARCHAR(25)  NOT NULL,
     Menu_description VARCHAR(80)  NOT NULL,
     Menu_price       NUMBER       NOT NULL,
     Menu_date        DATE         NOT NULL,
