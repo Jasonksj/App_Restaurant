@@ -6,11 +6,6 @@ Prompt
 Prompt***************************** TABLE CREATION FOR SWEET_WORLD SCHEMA *****************************
 Prompt
 
-Prompt
-Prompt***************************** CREATION OF THE ADMIN TABLE *****************************
-Prompt
-
-@Object/Tables/Table_admin
 
 Prompt
 Prompt***************************** CREATION OF THE USER TABLE *****************************
