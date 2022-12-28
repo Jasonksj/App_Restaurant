@@ -26,11 +26,17 @@ specify log path as parameter 5:
 
 specify connect string as parameter 6:
 
+DROP USER swl CASCADE
+*
+ERROR at line 1:
+ORA-01940: cannot drop a user that is currently connected
 
-User dropped.
 
+CREATE USER swl IDENTIFIED BY swl
+            *
+ERROR at line 1:
+ORA-01920: user name 'SWL' conflicts with another user or role name
 
-User created.
 
 ALTER USER SET DEFAUT TABLE
 
@@ -68,74 +74,110 @@ Session altered.
 
 ***************************** CREATION OF THE ADMIN SEQUENCE *****************************
 
+CREATE SEQUENCE id_admin_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE USER SEQUENCE *****************************
 
+CREATE SEQUENCE id_user_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE ORDERS SEQUENCE *****************************
 
+CREATE SEQUENCE id_order_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE NOTE SEQUENCE *****************************
 
+CREATE SEQUENCE id_note_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE CONFIG SEQUENCE *****************************
 
+CREATE SEQUENCE id_config_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE PANIER SEQUENCE *****************************
 
+CREATE SEQUENCE id_panier_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE RESTAURANT SEQUENCE *****************************
 
+CREATE SEQUENCE id_resto_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE CUSTOMERS SEQUENCE *****************************
 
+CREATE SEQUENCE id_customers_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE MENU SEQUENCE *****************************
 
+CREATE SEQUENCE id_menu_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE DISH SEQUENCE *****************************
 
+CREATE SEQUENCE id_dish_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE COMPLEMENT SEQUENCE *****************************
 
+CREATE SEQUENCE id_complement_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 ***************************** CREATION OF THE SECULANT SEQUENCE *****************************
 
+CREATE SEQUENCE id_seculant_seq
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Sequence created.
 
 
 *******************************************************************SWEET_WORLD*************************************************************************
@@ -155,80 +197,119 @@ Session altered.
 
 ***************************** CREATION OF THE ADMIN TABLE *****************************
 
+CREATE TABLE ADMIN (
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE USER TABLE *****************************
 
+CREATE TABLE Users
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE RESTAURANT TABLE *****************************
 
+CREATE TABLE Restaurant
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE CUSTOMERS TABLE *****************************
 
+CREATE TABLE Customers
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE MENU TABLE *****************************
 
+CREATE TABLE Menu
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE DISH TABLE *****************************
 
+CREATE TABLE Dish
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE COMPLEMENT TABLE *****************************
 
+CREATE TABLE Complement
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE SECULANT TABLE *****************************
 
+CREATE TABLE Seculant
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE ORDERS TABLE *****************************
 
+CREATE TABLE Orders
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE PANIER TABLE *****************************
 
+CREATE TABLE Panier
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE NOTE TABLE *****************************
 
+CREATE TABLE Note
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE CONFIG TABLE *****************************
 
+CREATE TABLE Config
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 ***************************** CREATION OF THE CONTROL_PANIER_MENU TABLE *****************************
 
+CREATE TABLE Control_Panier_Menu
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Table created.
 
 
 *******************************************************************SWEET_WORLD*************************************************************************
@@ -248,80 +329,119 @@ Session altered.
 
 ***************************** CREATION OF THE ADMIN INDEX *****************************
 
+CREATE UNIQUE INDEX id_admin_ix
+                    *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Index created.
 
 
 ***************************** CREATION OF THE USER INDEX *****************************
 
+CREATE UNIQUE INDEX id_user_ix
+                    *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Index created.
 
 
 ***************************** CREATION OF THE RESTAURANT INDEX *****************************
 
+ON Restaurant(id_resto)
+   *
+ERROR at line 2:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Index created.
 
 
 ***************************** CREATION OF THE CUSTOMERS INDEX *****************************
 
+CREATE UNIQUE INDEX id_customers_pk_ix
+                    *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Index created.
 
 
 ***************************** CREATION OF THE MENU INDEX *****************************
 
+ON Menu(id_menu)
+   *
+ERROR at line 2:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Index created.
 
 
 ***************************** CREATION OF THE DISH INDEX *****************************
 
+ON Dish(id_dish)
+   *
+ERROR at line 2:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Index created.
 
 
 ***************************** CREATION OF THE COMPLEMENT INDEX *****************************
 
+ON Complement(id_complement)
+   *
+ERROR at line 2:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Index created.
 
 
 ***************************** CREATION OF THE SECULANT INDEX *****************************
 
+ON Seculant(id_seculant)
+   *
+ERROR at line 2:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Index created.
 
 
 ***************************** CREATION OF THE ORDERS INDEX *****************************
 
+CREATE  INDEX id_order_pk_ix
+              *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Index created.
 
 
 ***************************** CREATION OF THE PANIER INDEX *****************************
 
+CREATE  INDEX id_panier_pk_ix
+              *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Index created.
 
 
 ***************************** CREATION OF THE NOTE INDEX *****************************
 
+CREATE UNIQUE INDEX id_Note_pk_ix
+                    *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Index created.
 
 
 ***************************** CREATION OF THE CONFIG INDEX *****************************
 
+ON Config(id_config)
+   *
+ERROR at line 2:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Index created.
 
 
 ***************************** CREATION OF THE CONTROL_PANIER_MENU INDEX *****************************
 
+CREATE UNIQUE INDEX id_control_panier_menu_pk_ix
+                    *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
-Index created.
 
 
 *******************************************************************SWEET_WORLD*************************************************************************
@@ -344,80 +464,119 @@ Session altered.
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE ADMIN TABLE *****************************
 
+		PRIMARY KEY(id_admin)
+		*
+ERROR at line 4:
+ORA-02260: table can have only one primary key
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE USER TABLE *****************************
 
+		PRIMARY KEY(id_user)
+		*
+ERROR at line 4:
+ORA-02260: table can have only one primary key
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE RESTAURANT TABLE *****************************
 
+ALTER TABLE Restaurant
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE CUSTOMERS TABLE *****************************
 
+        PRIMARY KEY(id_cust)
+        *
+ERROR at line 4:
+ORA-02260: table can have only one primary key
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE MENU TABLE *****************************
 
+ALTER TABLE Menu
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE DISH TABLE *****************************
 
+ALTER TABLE Dish
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE COMPLEMENT TABLE *****************************
 
+ALTER TABLE Complement
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE SECULANT TABLE *****************************
 
+ALTER TABLE Seculant
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE ORDERS TABLE *****************************
 
+		PRIMARY KEY(id_order)
+		*
+ERROR at line 4:
+ORA-02260: table can have only one primary key
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE PANIER TABLE *****************************
 
+	    PRIMARY KEY(id_panier)
+	    *
+ERROR at line 4:
+ORA-02260: table can have only one primary key
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE NOTE TABLE *****************************
 
+        PRIMARY KEY(id_note)
+        *
+ERROR at line 5:
+ORA-02260: table can have only one primary key
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE CONFIG TABLE *****************************
 
+ALTER TABLE Config
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CONSTRAINT PRIMARY KEY OF THE CONTROL_PANIER_MENU TABLE *****************************
 
+		PRIMARY KEY(id_panier, id_menu)
+		*
+ERROR at line 4:
+ORA-02260: table can have only one primary key
 
-Table altered.
 
 
 *******************************************************************SWEET_WORLD*************************************************************************
@@ -440,62 +599,101 @@ Session altered.
 
 ***************************** CONSTRAINT FOREIGN KEY OF THE Users TABLE *****************************
 
+        FOREIGN KEY(id_admin)
+        *
+ERROR at line 4:
+ORA-02275: such a referential constraint already exists in the table
 
-Table altered.
 
 
 ***************************** CONSTRAINT FOREIGN KEY OF THE CUSTOMERS TABLE *****************************
 
+        FOREIGN KEY (id_user)
+        *
+ERROR at line 4:
+ORA-02275: such a referential constraint already exists in the table
 
-Table altered.
 
 
 ***************************** CONSTRAINT FOREIGN KEY OF THE MENU TABLE *****************************
 
-
-Table altered.
-
-
-Table altered.
-
-
-Table altered.
+ALTER TABLE Menu
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
 
-Table altered.
+ALTER TABLE Menu
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
 
-Table altered.
+ALTER TABLE Menu
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
+
+
+ALTER TABLE Menu
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
+
+
+ALTER TABLE Menu
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
+
 
 
 ***************************** CONSTRAINT FOREIGN KEY OF THE ORDERS TABLE *****************************
 
+ALTER TABLE Orders
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
+        FOREIGN KEY (id_panier)
+        *
+ERROR at line 4:
+ORA-02275: such a referential constraint already exists in the table
 
-Table altered.
 
 
 ***************************** CONSTRAINT  FOREIGN KEY OF THE RESTAURANT TABLE *****************************
 
+ALTER TABLE Restaurant
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CONSTRAINT FOREIGN KEY OF THE NOTE TABLE *****************************
 
+        FOREIGN KEY (id_cust)
+        *
+ERROR at line 4:
+ORA-02275: such a referential constraint already exists in the table
 
-Table altered.
 
+ALTER TABLE Note
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CONSTRAINT  FOREIGN KEY OF THE PANIER TABLE *****************************
 
+		FOREIGN KEY (id_cust)
+		*
+ERROR at line 4:
+ORA-02275: such a referential constraint already exists in the table
 
-Table altered.
 
 
 *******************************************************************SWEET_WORLD*************************************************************************
@@ -515,50 +713,74 @@ Session altered.
 
 ***************************** CREATION OF THE ADMIN CHECK *****************************
 
+		CONSTRAINT pwd_admin_chk  CHECK( LENGTH(pwd_admin) >= 9 )
+		           *
+ERROR at line 3:
+ORA-02264: name already used by an existing constraint
 
-Table altered.
 
 
 ***************************** CREATION OF THE USER CHECK *****************************
 
+		CONSTRAINT password_chk  CHECK( LENGTH(password) >= 9 )
+		           *
+ERROR at line 3:
+ORA-02264: name already used by an existing constraint
 
-Table altered.
 
 
 ***************************** CREATION OF THE RESTAURANT CHECK *****************************
 
+ALTER TABLE Restaurant
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CREATION OF THE CUSTOMERS CHECK *****************************
 
+        CONSTRAINT CHK_Customers_phone CHECK (
+                   *
+ERROR at line 3:
+ORA-02264: name already used by an existing constraint
 
-Table altered.
 
 
 ***************************** CREATION OF THE MENU CHECK *****************************
 
+ALTER TABLE Menu
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CREATION OF THE NOTE CHECK *****************************
 
+        CONSTRAINT CHK_Note_valeur CHECK(Valeur BETWEEN 0 AND 10)
+                   *
+ERROR at line 3:
+ORA-02264: name already used by an existing constraint
 
-Table altered.
 
 
 ***************************** CREATION OF THE CONFIG CHECK *****************************
 
+ALTER TABLE Config
+            *
+ERROR at line 1:
+ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
 
-Table altered.
 
 
 ***************************** CREATION OF THE CONTROL_PANIER_MENU CHECK *****************************
 
+		CONSTRAINT Quantity_chk CHECK(quantity > 0)
+		           *
+ERROR at line 3:
+ORA-02264: name already used by an existing constraint
 
-Table altered.
 
 
 *******************************************************************SWEET_WORLD*************************************************************************
@@ -578,41 +800,77 @@ Session altered.
 
 ***************************** POPULATING ADMIN TABLE *****************************
 
-
-Function created.
-
-
-1 row created.
-
-
-1 row created.
+CREATE FUNCTION format1(VAR Users.password%TYPE)
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (1,'Samy Bodio',format1('qwerty123'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (2,'Silha Jason',format1('123456789'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (3,'Nguiakam Angele',format1('123ktrd89'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (4,'Kangue Loic',format1('day@!6789'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (5,'Awounang Stone',format1('123@pryt9'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (6,'Fotso Manuel',format1('12345#?fr'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (7,'Djouda Patric',format1('12345$ju#'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (8,'Tatsinkou Crispin',format1('123kid@sd'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
 
 
-1 row created.
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (9,'Makolo Ekoka',format1('123fhk@!@'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
+
+
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (10,'Kenchoung Sadio',format1('123456qsz'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
+
+
+INSERT INTO ADMIN(id_admin,name_admin,pwd_admin) VALUES (11,'Motso ALix',format1('1@#lmn9fd'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009183) violated
+
 
 
 ***************************** POPULATING USER TABLE *****************************
@@ -620,590 +878,1148 @@ Function created.
 
 Function created.
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0001,'Samira',format1('qwerty123'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0002,'Olivier',format1('123456789'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0003,'Zavier',format1('123ktrd89'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0004,'Robert',format1('day@!6789'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0005,'victor',format1('123@pryt9'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0006,'venezia',format1('12345#?fr'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0007,'anastasia',format1('12345$ju#'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0008,'socrate',format1('123kid@sd'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0009,'Willy',format1('123fhk@!@'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0010,'anaele',format1('123456qsz'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0011,'david',format1('1@#lmn9fd'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0012,'joel',format1('1234?POss'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0013,'nikki',format1('12349segt'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0014,'Sabrina',format1('12389fdem'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0015,'ebene',format1('12314deBD'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0016,'Nathan',format1('123lfj9vf'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0017,'Samy',format1('12342#jd9'),1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0018,'Aristide',format1('123@fhh9e'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0019,'Rolande',format1('123bg39ps'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password) VALUES (0020,'Juliette',format1('1222289de'))
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0021,'Jason',format1('12888hf12'),2)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0022,'Makolo',format1('1244489id'),9)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0023,'Tatsinkou',format1('12ghd89er'),8)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0024,'Patric',format1('123899Ku9'),7)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0025,'Manuel',format1('123jdkf91'),6)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0026,'Alix',format1('12.saedds'),11)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0027,'Nguiakam',format1('12$%!@er9'),3)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0028,'Kangue',format1('15z56@ze!'),4)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
 
 
-1 row created.
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0029,'Stone',format1('123hhk$#@'),5)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
+
+
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0030,'Dany',format1('12@!@#aze'),10)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.USER_PK) violated
+
+
+INSERT INTO Users(id_user,username,password,id_admin) VALUES (0031,'Martina',format1('UYT#$@er3'),7)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SYS_C009187) violated
+
 
 
 ***************************** POPULATING DISH TABLE *****************************
 
+INSERT INTO Dish ( id_dish , Name_dish) VALUES  (1, 'Hamburger')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (2, 'Cheese burger')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (3, 'Double cheese burger')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (4, 'Triple cheese burger')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (5,'Banana burger')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (6,'Double steak banana burger')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (7,'Big size burger')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish  ) VALUES (8,'Kebab')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish  ) VALUES (9,'Tacos')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (10,'Brochettes de porc')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (11,'Brochettes de poisson')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (12,'Brochettes de filet de boeuf')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (13,'Steak de boeuf')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (14,'Cotelettes de porc')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (15,'Echines de porc')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (16,'Gambas grillees')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (17,'Saucisses de toulouse')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (18,'Saucisses merguez')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (19,'Cotelettes d agneau')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (20,'Poulet braise aux epices locales')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (21,'Porc braise aux epices locales')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (22,'Poisson braise aux epices locales')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (23,'Salade fine')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (24,'Salade au poulet')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (25,'Salade au jambon')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (26, 'Salade aux crevettes')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (27,'Salade de papel')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (28,'Salade exotique aux crevettes')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (29,'Salade de crudites')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (30,'Wrap au jambon')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (31,'Wrap au poulet')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (32,'Wrap aux crevettes')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (33,'Pizza margarita')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (34,'Pizza familiale')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (35,'Pizza vegetarienne')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (36,'Pizza mexicana viande')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (37,'Pizza bolognaise')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (38,'Chef pizza')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (39,'Pizza 4 fromages')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (40,'Pizza 4 saisons')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (41,'Sicilienne')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (42,'pizza pepperoni')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (43,'La romaine')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (44,'Ndole')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (45,'Eru')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (46,'Taro')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (47,'Okok')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (48,'Ikok')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (49,'Pilé')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (50,'Mbongo')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (51,'Nkui')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (52,'Sanga')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (53,'Nkontchap')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (54,'Koki')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (55,'Mitumba')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (56,'Bekwam')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
+INSERT INTO Dish ( id_dish , Name_dish ) VALUES (57,'Banane malaxé')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_DISH_PK) violated
 
-1 row created.
 
 
 ***************************** POPULATING COMPLEMENT TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (1,'Riz')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (2,'Plantain mur')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (3,'Macabo')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (4,'Banane')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (5,'Patate')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (6,'Pommes de terre')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (7,'Manioc')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (8,'Igname')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (9,'Frites de plantains')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (10,'Frites de pommes de terre')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (11,'Mignondo')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (12,'Baton de manioc')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
 
 
-1 row created.
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (13,'Couscous mais')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
+
+
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (14,'Couscous de manioc')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
+
+
+INSERT INTO Complement ( id_complement , Name_complement ) VALUES (15,'Tapioca')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_COMPLEMENT_PK) violated
+
 
 
 ***************************** POPULATING SECULANT TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(1,'Peau de boeuf')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
 
 
-1 row created.
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(2,'Foie de boeuf')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
 
 
-1 row created.
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(3,'Poisson Capitaine')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
 
 
-1 row created.
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(4,'Maquereau')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
 
 
-1 row created.
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(5,'Jambon')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
 
 
-1 row created.
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(6,'Cuisse de Poulet')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
 
 
-1 row created.
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(7,'Viande de porc')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
+
+
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(8,'Poisson Sole')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
+
+
+INSERT INTO Seculant(id_seculant,Name_Seculant)VALUES(9,'Poisson Bar')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.SECULANT_PK) violated
+
 
 
 ***************************** POPULATING CONFIG TABLE *****************************
 
+INSERT INTO Config(id_config, marge, freight_costs)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONFIG_PK) violated
 
-1 row created.
 
 
 ***************************** POPULATING CONTROL_PANIER_MENU TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0001,1,2)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0002,2,2)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0003,3,5)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0004,4,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0005,5,3)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0006,6,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0007,7,6)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0008,8,7)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0009,9,3)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0010,10,2)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0011,11,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0012,12,5)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0013,13,2)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0014,14,5)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
+
+
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0015,15,2)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
+
+
+INSERT INTO Control_Panier_Menu(id_panier,id_menu,Quantity) VALUES (0016,16,4)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.CONTROL_PANIER_MENU_PK) violated
+
 
 
 ***************************** POPULATING CUSTOMERS TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
 
 
-1 row created.
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
+
+
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
+
+
+INSERT INTO Customers(id_cust,first_name,last_name,phone_number,Email,Datecd_cust,Cust_address,id_user)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_CUST_PK) violated
+
 
 
 ***************************** POPULATING RESTAURANT TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(1,'Friends Food','Fast-food','Gilbert',690287899,'Bonamoussadi',TO_DATE('11/01/2010', 'DD/MM/YYYY'),1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(2,'5 Fourchettes','Un peu de tout','Albert',672234578,'Bonamoussadi',TO_DATE('01/04/29', 'DD/MM/YYYY'),22)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(3,'Lynk','bar-restaurant','Bernard',699887532,'Bonanjo',TO_DATE('14/05/2010', 'DD/MM/YYYY'),23)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(4,'LA PIZZERIA','PIZZA','Alfredo',650234589,'Bonamoussadi',TO_DATE('23/01/2017', 'DD/MM/YYYY'),4)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(5,'Saga Africa','Mets Africain','Jason',650234589,'Bonamoussadi',TO_DATE('02/03/29', 'DD/MM/YYYY'),5)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(6,'L Italien-Piccola Venezia','Resto Italien','Crispin',699257899,'Yassa',TO_DATE('26/2/2018', 'DD/MM/YYYY'),6)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(7,'Traditional-food','Mets Africain','Stephanie',650245586,'Bonaberi',TO_DATE('08/02/2018', 'DD/MM/YYYY'),7)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(8,'Le Socrate','Un peu de tout','Yvan',675231478,'Mokolo',TO_DATE('09/02/2018', 'DD/MM/YYYY'),8)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(9,'C-PIZZA','PIZZA','Nathan',678962125,'Akwa',TO_DATE('15/07/29', 'DD/MM/YYYY'),27)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(10,'K MyChoice','Fast-food','Maxime',620457896,'Messasi',TO_DATE('21/09/2018', 'DD/MM/YYYY'),21)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(11,'Tchop et Yamo','Fast-food','Calvine',678965423,'Logbessou',TO_DATE('11/05/2018', 'DD/MM/YYYY'),11)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(12,'Hilton','Restaurants-chics','Manuel',699210345,'Bonanjo',TO_DATE('29/06/2018', 'DD/MM/YYYY'),29)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(13,'Restaurant SIM','Mets Traditionnel','Stephane',699621235,'Akwa',TO_DATE('28/02/21', 'DD/MM/YYYY'),13)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
 
 
-1 row created.
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(14,'Le plaisir du Gout Pizzeria','PIZZA','Kabhy',678963215,'Kribi',TO_DATE('01/03/2012', 'DD/MM/YYYY'),14)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
+
+
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(15,'Ebene plus','Mets Africain','Nono',690324587,'Kribi',TO_DATE('10/11/2018', 'DD/MM/YYYY'),15)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
+
+
+INSERT INTO Restaurant(id_resto,name_resto,Description,name_employee,phone_number,resto_address,Date_res_created,id_user)VALUES(16,'Pieds dans l eau','aliment marin','Estebane',650321451,'Kribi',TO_DATE('15/11/2018', 'DD/MM/YYYY'),17)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.RESTAURANT_PK) violated
+
 
 
 ***************************** POPULATING NOTE TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(1,10,1,0001)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(2,9,2,0002)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(3,8,3,0004)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(4,7,4,0003)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(5,6,5,0006)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(6,5,6,0010)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(7,4,7,0011)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(8,7,8,0012)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(9,8,9,0009)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(10,7,10,0008)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(11,6,11,0007)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(12,6,12,00013)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
 
 
-1 row created.
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(13,2,13,0005)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
+
+
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(14,10,14,0014)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
+
+
+INSERT INTO Note(id_note,Valeur,id_cust,id_resto)Values(15,0,15,0001)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_NOTE_PK) violated
+
 
 
 ***************************** POPULATING MENU TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(1, 'Okok','Ceci es un plat de okok',1500,TO_DATE('23/10/2022', 'DD/MM/YYYY'),10,47,3,7,1,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(2, 'Bekwam','Ceci es un plat de bekwam',2500,TO_DATE('15/10/2022', 'DD/MM/YYYY'),20,56,2,14,2,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(3, 'Eru','Ceci es un plat de eru',3000,TO_DATE('17/10/2022', 'DD/MM/YYYY'),15,45,1,15,3,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(4, 'Wrap au jambon','Ceci es un wrap au jambon',1000,TO_DATE('27/10/2022', 'DD/MM/YYYY'),19,30,5,10,4,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(5, 'Brochettes de porc','Une grillade pour les grands et petits',2000,TO_DATE('11/10/2022', 'DD/MM/YYYY'),30,10,6,9,5,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(6, 'Tacos','Ceci es un plat de tacos',2500,TO_DATE('30/10/2022', 'DD/MM/YYYY'),40,9,NULL,NULL,6,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(7, 'Pizza vegetarienne','Une composition de pizza pour ravir les amis des animaux',5500,TO_DATE('05/10/2022', 'DD/MM/YYYY'),20,35,NULL,NULL,7,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(8, 'Big size burger','Une burger normal vous suffit plus? Essayer le big size!',1500,TO_DATE('02/10/2022', 'DD/MM/YYYY'),45,7,2,10,8,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
 
 
-1 row created.
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(9, 'Poulet braise','Une envie de découvrir une recette revisité à lafricaine?',4500,TO_DATE('29/09/2022', 'DD/MM/YYYY'),10,20,6,1,9,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
+
+
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(10, 'Ndole','Ressentez les appels de la côte avec un plat typiquement Duala',1500,TO_DATE('09/09/2022', 'DD/MM/YYYY'),13,44,2,11,10,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.MENU_PK) violated
+
+
+INSERT INTO Menu(id_menu, Menu_title,Menu_description,Menu_price, Menu_date,Menu_Qty,id_dish,id_seculant,id_complement,id_resto,id_config)VALUES(11, 'Hamburger avec des frites + sauce','Sentez vous comme au Macdo',3500,TO_DATE('08/04/2022', 'DD/MM/YYYY'),8,1,2,15,11,1)
+                                                                                                                                                     *
+ERROR at line 1:
+ORA-12899: value too large for column "SWL"."MENU"."MENU_TITLE" (actual: 33, maximum: 25)
+
 
 
 1 row created.
@@ -1223,132 +2039,108 @@ Function created.
 
 ***************************** POPULATING PANIER TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0001,1)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0002,2)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0003,3)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0004,4)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0005,5)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0006,6)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0007,7)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0008,8)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0009,9)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0010,10)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0011,11)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0012,12)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
 
 
-1 row created.
+INSERT INTO Panier(id_panier,id_cust)VALUES(0013,13)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
+
+
+INSERT INTO Panier(id_panier,id_cust)VALUES(0014,14)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
+
+
+INSERT INTO Panier(id_panier,id_cust)VALUES(0015,15)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_PANIER_PK) violated
+
 
 
 ***************************** POPULATING ORDERS TABLE *****************************
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
+INSERT INTO Orders (id_order,order_date,id_resto,id_panier) VALUES (0001,TO_DATE('02/01/2022', 'DD/MM/YYYY'),0001,0001)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_ORDER_PK) violated
 
 
-1 row created.
+INSERT INTO Orders (id_order,order_date,id_resto,id_panier) VALUES (0002,TO_DATE('11/02/2022', 'DD/MM/YYYY'),0002,0002)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SWL.ID_ORDER_PK) violated
 
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-1 row created.
-
-
-
-
-****      *********  *********    	 	*********   **********  **********  ***********       ****      ***      ***
-******     **      ** **      **   	        **      **  **          ***         ***********      ******     ***      ***
-**    **    *********  *********     	        *********   **********  **********      ***         **    **    ***      ***
-**********   **         **                      **   **     **********         ***      ***        **********   ***      ***
-**        **  **         **         	        **    **    **          **********      ***       **        **  ************
-**          ** **         **         	        **     **   **********  **********      ***      **          ** ************
-
-
-
-
-
-
-TABLE_NAME
---------------------------------------------------------------------------------------------------------------------------------
-ADMIN
-USERS
-RESTAURANT
-CUSTOMERS
-MENU
-DISH
-COMPLEMENT
-SECULANT
-ORDERS
-PANIER
-NOTE
-CONFIG
-CONTROL_PANIER_MENU
-
-13 rows selected.
-
-
-*******************************************************************APP_RESTAU*************************************************************************
 
